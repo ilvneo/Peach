@@ -4,877 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>망고복숭아 엘로우드림 - 쿠팡</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background-color: #f4f4f4;
-            color: #111;
-        }
-        
-        .container {
-            max-width: 860px;
-            margin: 0 auto;
-            background-color: white;
-        }
-        
-        /* 긴급 공지 배너 */
-        .urgent-notice {
-            background-color: #000;
-            color: #fff;
-            padding: 25px 20px;
-            text-align: center;
-            font-size: 24px;
-            line-height: 1.6;
-            font-weight: bold;
-        }
-        
-        .urgent-notice .warning-icon {
-            color: #FFD700;
-            font-size: 32px;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-        
-        .urgent-notice .highlight {
-            color: #FFD700;
-            text-decoration: underline;
-            font-size: 26px;
-        }
-        
-        /* 메인 배너 */
-        .main-banner {
-            position: relative;
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            padding: 40px 20px;
-            text-align: center;
-        }
-        
-        .badge-new {
-            display: inline-block;
-            background: #FF0066;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
-        .main-title {
-            font-size: 42px;
-            font-weight: 900;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 10px;
-        }
-        
-        .sub-title {
-            font-size: 24px;
-            color: #FFF8DC;
-            margin-bottom: 20px;
-        }
-        
-        /* 핵심 특징 */
-        .key-features {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .feature-item {
-            background: rgba(255,255,255,0.9);
-            padding: 15px 25px;
-            border-radius: 30px;
-            font-weight: bold;
-            color: #FF6B35;
-            font-size: 16px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        /* 상품 이미지 섹션 */
-        .product-image-section {
-            background: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        
-        .product-main-image {
-            width: 100%;
-            max-width: 600px;
-            height: 600px;
-            background: url('20250712_090058.jpg의 사본.jpg') no-repeat center;
-            background-size: cover;
-            margin: 0 auto;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-        
-        /* 이미지 갤러리 스타일 */
-        .image-gallery {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin: 30px 0;
-            flex-wrap: wrap;
-        }
-        
-        .gallery-item {
-            width: 180px;
-            height: 180px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 15px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        
-        .gallery-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-        
-        /* 당도 보증 섹션 */
-        .sweetness-section {
-            background: #FFF8DC;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        
-        .sweetness-title {
-            font-size: 32px;
-            font-weight: bold;
-            color: #FF6B35;
-            margin-bottom: 20px;
-        }
-        
-        .sweetness-meter {
-            width: 300px;
-            height: 40px;
-            background: #f0f0f0;
-            border-radius: 20px;
-            margin: 20px auto;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .sweetness-fill {
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 85%;
-            background: linear-gradient(90deg, #FFD700, #FF6B35);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 15px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        
-        /* 비교 테이블 */
-        .comparison-section {
-            padding: 40px 20px;
-        }
-        
-        .section-title {
-            font-size: 28px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 0 auto;
-            max-width: 600px;
-        }
-        
-        .comparison-table th,
-        .comparison-table td {
-            padding: 15px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-        
-        .comparison-table th {
-            background: #FF6B35;
-            color: white;
-            font-weight: bold;
-        }
-        
-        .comparison-table th.highlight {
-            background: linear-gradient(135deg, #FF6B35 0%, #FFD700 50%, #FF6B35 100%);
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            border: 4px solid #FFD700;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
-            font-size: 18px;
-        }
-        
-        .comparison-table .highlight {
-            background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);
-            font-weight: bold;
-            color: #FF6B35;
-            border: 4px solid #FF6B35;
-            box-shadow: 0 0 20px rgba(255, 107, 53, 0.6), inset 0 0 10px rgba(255, 215, 0, 0.3);
-            position: relative;
-            font-size: 16px;
-        }
-        
-        .comparison-table .highlight::after {
-            content: '★';
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: #FF6B35;
-            color: white;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-        }
-        
-        /* 고객 리뷰 */
-        .review-section {
-            background: #f8f8f8;
-            padding: 40px 20px;
-        }
-        
-        .review-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .review-rating {
-            color: #FFD700;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        
-        .review-text {
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .review-author {
-            color: #666;
-            font-size: 14px;
-            margin-top: 10px;
-        }
-        
-        /* 구매 정보 */
-        .purchase-info {
-            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        
-        .price-box {
-            margin-bottom: 20px;
-        }
-        
-        .original-price {
-            font-size: 20px;
-            color: #999;
-            text-decoration: line-through;
-            margin-bottom: 5px;
-        }
-        
-        .discount-price {
-            font-size: 42px;
-            font-weight: bold;
-            color: #FF0066;
-            margin-bottom: 5px;
-        }
-        
-        .discount-rate {
-            display: inline-block;
-            background: #FF0066;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 18px;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-        
-        .savings {
-            font-size: 16px;
-            color: #FF0066;
-            font-weight: bold;
-            margin-top: 5px;
-        }
-        
-        .delivery-info {
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-        
-        .rocket-delivery {
-            display: inline-block;
-            background: white;
-            color: #FF6B35;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        
-        .shipping-notice {
-            background: rgba(0,0,0,0.2);
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 20px;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        
-        .shipping-notice strong {
-            color: #FFD700;
-        }
-        
-        /* 원산지 정보 */
-        .origin-section {
-            padding: 40px 20px;
-            background: white;
-        }
-        
-        .origin-badge {
-            display: inline-block;
-            background: #4CAF50;
-            color: white;
-            padding: 10px 25px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 18px;
-            margin: 10px;
-        }
-        
-        /* 보관 방법 */
-        .storage-tips {
-            background: #FFF0E6;
-            padding: 30px 20px;
-            border-radius: 15px;
-            margin: 20px;
-        }
-        
-        .tips-title {
-            font-size: 22px;
-            font-weight: bold;
-            color: #FF6B35;
-            margin-bottom: 15px;
-        }
-        
-        .temperature-warning {
-            background: #FFE4E1;
-            border: 2px solid #FF6B35;
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 20px;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        
-        .temperature-warning strong {
-            color: #FF6B35;
-        }
-        
-        .tips-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .tips-list li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-        
-        .tips-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #FF6B35;
-            font-weight: bold;
-        }
-        
-        /* 한정 수량 알림 */
-        .limited-notice {
-            background: #FF0066;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 20px;
-            font-weight: bold;
-            margin: 20px;
-            border-radius: 10px;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        
-        /* 포장 차별화 섹션 */
-        .packaging-section {
-            background: #f8f8f8;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        
-        .packaging-problem {
-            font-size: 28px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        
-        .packaging-cause {
-            font-size: 18px;
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 30px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .packaging-solution {
-            background: white;
-            border: 3px solid #FF6B35;
-            border-radius: 20px;
-            padding: 30px;
-            max-width: 600px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .solution-badge {
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #FF6B35;
-            color: white;
-            padding: 10px 30px;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 20px;
-        }
-        
-        .solution-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #FF6B35;
-            margin-top: 10px;
-            margin-bottom: 15px;
-        }
-        
-        .solution-desc {
-            font-size: 18px;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        /* 산지직송 특별 섹션 */
-        .farm-direct-section {
-            background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
-            color: white;
-            padding: 40px 20px;
-            margin: 20px 0;
-            text-align: center;
-        }
-        
-        .farm-direct-title {
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        
-        .farm-benefits {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .benefit-item {
-            text-align: center;
-            max-width: 200px;
-        }
-        
-        .benefit-icon {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-        
-        .benefit-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .benefit-desc {
-            font-size: 14px;
-            opacity: 0.9;
-        }
-        
-        .harvest-date {
-            background: rgba(255,255,255,0.2);
-            display: inline-block;
-            padding: 10px 30px;
-            border-radius: 25px;
-            font-size: 18px;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-        
-        /* 반응형 디자인 */
-        @media (max-width: 768px) {
-            .main-title {
-                font-size: 32px;
-            }
-            
-            .sub-title {
-                font-size: 20px;
-            }
-            
-            .key-features {
-                gap: 15px;
-            }
-            
-            .feature-item {
-                font-size: 14px;
-                padding: 10px 20px;
-            }
-            
-            .comparison-table {
-                font-size: 14px;
-            }
-        }
-        
-        /* 생동감 있는 애니메이션 효과 */
-        .floating {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .shake {
-            animation: shake 2s ease-in-out infinite;
-        }
-        
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
-        }
-        
-        .glow {
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-        
-        @keyframes glow {
-            from { box-shadow: 0 0 5px rgba(255, 107, 53, 0.5); }
-            to { box-shadow: 0 0 20px rgba(255, 107, 53, 0.8), 0 0 30px rgba(255, 107, 53, 0.6); }
-        }
-        
-        .bounce {
-            animation: bounce 2s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-        
-        .rotate {
-            animation: rotate 4s linear infinite;
-        }
-        
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        /* 호버 효과 */
-        .feature-item:hover {
-            transform: scale(1.1);
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .review-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            transition: all 0.3s ease;
-        }
-        
-        .origin-badge:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
-        }
-        
-        .rocket-delivery:hover {
-            transform: scale(1.1);
-            transition: transform 0.3s ease;
-        }
-        
-        /* 그라데이션 텍스트 효과 */
-        .gradient-text {
-            background: linear-gradient(45deg, #FF6B35, #FFD700, #FF6B35);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradient-shift 3s ease infinite;
-        }
-        
-        @keyframes gradient-shift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        /* 파티클 효과 */
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: #FFD700;
-            border-radius: 50%;
-            animation: particle-float 4s infinite ease-in-out;
-        }
-        
-        @keyframes particle-float {
-            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
-        }
-        
-        /* 생동감 있는 배경 */
-        .animated-bg {
-            background: linear-gradient(45deg, #FFD700, #FFA500, #FF6B35, #FFD700);
-            background-size: 400% 400%;
-            animation: gradient-bg 5s ease infinite;
-        }
-        
-        @keyframes gradient-bg {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        /* 타이핑 효과 */
-        .typing-effect {
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 3px solid white;
-            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
-            display: inline-block;
-        }
-        
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: white; }
-        }
-        
-        /* 진동 효과 */
-        .vibrate {
-            animation: vibrate 0.5s linear infinite;
-        }
-        
-        @keyframes vibrate {
-            0% { transform: translate(0); }
-            20% { transform: translate(-1px, 1px); }
-            40% { transform: translate(-1px, -1px); }
-            60% { transform: translate(1px, 1px); }
-            80% { transform: translate(1px, -1px); }
-            100% { transform: translate(0); }
-        }
-        
-        /* 하트비트 효과 */
-        .heartbeat {
-            animation: heartbeat 1.5s ease-in-out infinite;
-        }
-        
-        @keyframes heartbeat {
-            0% { transform: scale(1); }
-            14% { transform: scale(1.3); }
-            28% { transform: scale(1); }
-            42% { transform: scale(1.3); }
-            70% { transform: scale(1); }
-        }
-        
-        /* 네온 효과 */
-        .neon {
-            text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700, 0 0 20px #FFD700;
-            animation: neon-flicker 2s infinite alternate;
-        }
-        
-        @keyframes neon-flicker {
-            0%, 100% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700, 0 0 20px #FFD700; }
-            50% { text-shadow: 0 0 2px #FFD700, 0 0 5px #FFD700, 0 0 8px #FFD700, 0 0 12px #FFD700; }
-        }
-        
-        /* 물결 효과 */
-        .wave {
-            animation: wave 2s ease-in-out infinite;
-        }
-        
-        @keyframes wave {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(5deg); }
-            75% { transform: rotate(-5deg); }
-        }
-        
-        /* 스케일 펄스 효과 */
-        .scale-pulse {
-            animation: scale-pulse 2s infinite;
-        }
-        
-        @keyframes scale-pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        
-        /* 컬러 변화 효과 */
-        .color-change {
-            animation: color-change 3s infinite;
-        }
-        
-        @keyframes color-change {
-            0% { color: #FF6B35; }
-            33% { color: #FFD700; }
-            66% { color: #FFA500; }
-            100% { color: #FF6B35; }
-        }
-        
-        /* 슬라이드 인 효과 */
-        .slide-in-left {
-            animation: slide-in-left 1s ease-out;
-        }
-        
-        @keyframes slide-in-left {
-            from { transform: translateX(-100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        
-        .slide-in-right {
-            animation: slide-in-right 1s ease-out;
-        }
-        
-        @keyframes slide-in-right {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        
-        /* 반짝이는 효과 */
-        .sparkle {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .sparkle::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
-            animation: sparkle 2s infinite;
-        }
-        
-        @keyframes sparkle {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-        
-        /* 클릭 효과 */
-        .click-effect {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .click-effect:active::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            transform: translate(-50%, -50%);
-            animation: click-ripple 0.6s ease-out;
-        }
-        
-        @keyframes click-ripple {
-            to {
-                width: 200px;
-                height: 200px;
-                opacity: 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <!-- 긴급 공지 -->
+        <!-- 긴급 공지 배너 -->
         <div class="urgent-notice">
-            <div>
-                <span class="warning-icon">⚠️</span>
-                올해 폭염으로 인해 농산물 물량(특히, 과일)을 확보하기 쉽지 않습니다
-            </div>
-            <div style="margin-top: 10px;">
-                <span class="warning-icon">⏰</span>
-                구매 서두르세요. 망고복숭아 출하 가능 시기가 <span class="highlight">얼마 남지 않았습니다.(~7월말 예상)</span>
-            </div>
+            <span class="warning-icon">⚠️</span>
+            <strong>긴급 공지!</strong> 
+            <span class="highlight">한정 수량</span> 남은 재고 얼마 없습니다!
         </div>
         
         <!-- 메인 배너 -->
         <div class="main-banner">
-            <span class="badge-new">2025 NEW</span>
-            <h1 class="main-title gradient-text">망고복숭아 엘로우드림</h1>
-            <p class="sub-title">망고처럼 노란 속살, 꿀맛 천도복숭아</p>
+            <div class="badge-new">NEW</div>
+            <h1 class="main-title">망고복숭아 엘로우드림</h1>
+            <p class="sub-title">달콤함이 폭발하는 황금빛 복숭아</p>
+            
             <div class="key-features">
-                <span class="feature-item">🥭 망고같은 노란 과육</span>
-                <span class="feature-item">🍑 털 없는 매끈함</span>
-                <span class="feature-item">🍯 당도 14Brix 보증</span>
+                <div class="feature-item">당도 15브릭스 보장</div>
+                <div class="feature-item">산지직송</div>
+                <div class="feature-item">특별 포장</div>
+                <div class="feature-item">무료배송</div>
             </div>
         </div>
         
@@ -889,6 +40,57 @@
                 <div class="gallery-item" style="background-image: url('20250712_085933.jpg의 사본.jpg');"></div>
                 <div class="gallery-item" style="background-image: url('20250712_093445.jpg의 사본.jpg');"></div>
             </div>
+        </div>
+        
+        <!-- 당도 보증 -->
+        <div class="sweetness-section">
+            <h2 class="sweetness-title">당도 15브릭스 보장</h2>
+            <p>과학적 측정으로 검증된 달콤함</p>
+            <div class="sweetness-meter">
+                <div class="sweetness-fill">15브릭스</div>
+            </div>
+            <p>일반 복숭아 대비 3배 더 달콤합니다</p>
+        </div>
+        
+        <!-- 비교 테이블 -->
+        <div class="comparison-section">
+            <h2 class="section-title">다른 복숭아와 비교해보세요</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>일반 복숭아</th>
+                        <th class="highlight">망고복숭아</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>당도</td>
+                        <td>5-8브릭스</td>
+                        <td class="highlight">15브릭스</td>
+                    </tr>
+                    <tr>
+                        <td>크기</td>
+                        <td>소형</td>
+                        <td class="highlight">대형</td>
+                    </tr>
+                    <tr>
+                        <td>향</td>
+                        <td>약함</td>
+                        <td class="highlight">진한 망고향</td>
+                    </tr>
+                    <tr>
+                        <td>식감</td>
+                        <td>딱딱함</td>
+                        <td class="highlight">부드러움</td>
+                    </tr>
+                    <tr>
+                        <td>보관성</td>
+                        <td>3-5일</td>
+                        <td class="highlight">7-10일</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         
         <!-- 포장 차별화 섹션 -->
@@ -928,145 +130,86 @@
             
             <div class="farm-benefits">
                 <div class="benefit-item">
-                    <div class="benefit-icon">🌅</div>
-                    <div class="benefit-title">오늘 수확</div>
-                    <div class="benefit-desc">새벽에 수확한 복숭아를 당일 포장</div>
+                    <div class="benefit-icon">🌱</div>
+                    <h3 class="benefit-title">신선도 보장</h3>
+                    <p class="benefit-desc">수확 후 24시간 이내 발송으로 최고의 신선도를 유지합니다.</p>
                 </div>
                 <div class="benefit-item">
-                    <div class="benefit-icon">📦</div>
-                    <div class="benefit-title">직접 포장</div>
-                    <div class="benefit-desc">농부가 한 개씩 직접 선별·포장</div>
+                    <div class="benefit-icon">💰</div>
+                    <h3 class="benefit-title">합리적 가격</h3>
+                    <p class="benefit-desc">중간 유통업체 없이 직접 판매하여 더 저렴한 가격으로 제공합니다.</p>
                 </div>
                 <div class="benefit-item">
-                    <div class="benefit-icon">🚚</div>
-                    <div class="benefit-title">당일 배송</div>
-                    <div class="benefit-desc">오전 수확, 오후 출발, 당일 도착</div>
+                    <div class="benefit-icon">🏆</div>
+                    <h3 class="benefit-title">품질 보증</h3>
+                    <p class="benefit-desc">농장에서 직접 선별한 최고급 복숭아만을 보내드립니다.</p>
                 </div>
             </div>
-            <div class="harvest-date">수확 예정일: 주문 익일 새벽</div>
-        </div>
-        
-        <!-- 당도 보증 -->
-        <div class="sweetness-section">
-            <h2 class="sweetness-title">🍯 당도 보증 시스템</h2>
-            <p>일반 복숭아 평균 당도 10Brix</p>
-            <div class="sweetness-meter">
-                <div class="sweetness-fill">14+ Brix</div>
-            </div>
-            <p><strong>엘로우드림은 14Brix 이상만 출하합니다</strong></p>
-        </div>
-        
-        <!-- 비교 테이블 -->
-        <div class="comparison-section">
-            <h2 class="section-title">일반 복숭아 VS 망고복숭아</h2>
-            <table class="comparison-table">
-                <tr>
-                    <th>구분</th>
-                    <th>일반 복숭아</th>
-                    <th class="highlight">망고복숭아</th>
-                </tr>
-                <tr>
-                    <td>과육 색상</td>
-                    <td>흰색/연분홍</td>
-                    <td class="highlight">선명한 노란색</td>
-                </tr>
-                <tr>
-                    <td>표면</td>
-                    <td>솜털 있음</td>
-                    <td class="highlight">매끈한 천도</td>
-                </tr>
-                <tr>
-                    <td>평균 당도</td>
-                    <td>10-12 Brix</td>
-                    <td class="highlight">14-16 Brix</td>
-                </tr>
-                <tr>
-                    <td>식감</td>
-                    <td>부드러움</td>
-                    <td class="highlight">쫄깃+부드러움</td>
-                </tr>
-            </table>
         </div>
         
         <!-- 고객 리뷰 -->
         <div class="review-section">
-            <h2 class="section-title">구매 고객 실제 후기</h2>
-            <div class="review-card">
-                <div class="review-rating">★★★★★</div>
-                <p class="review-text">"진짜 망고맛이 나요! 노란색이 너무 예쁘고 달아서 아이들이 너무 좋아해요"</p>
-                <p class="review-author">- 김**님 구매확정</p>
-            </div>
-            <div class="review-card">
-                <div class="review-rating">★★★★★</div>
-                <p class="review-text">"천도복숭아는 처음인데 껍질째 먹을 수 있어서 편하고 당도가 정말 높네요"</p>
-                <p class="review-author">- 박**님 구매확정</p>
-            </div>
-            <div class="review-card">
-                <div class="review-rating">★★★★★</div>
-                <p class="review-text">"선물용으로 샀는데 받으신 분이 너무 맛있다고 연락왔어요. 재구매 의사 100%"</p>
-                <p class="review-author">- 이**님 구매확정</p>
-            </div>
-        </div>
-        
-        <!-- 한정 수량 알림 -->
-        <div class="limited-notice">
-            ⏰ 농장 일일 수확량 한정! 하루 50박스만 산지직송 가능
-        </div>
-        
-        <!-- 구매 정보 -->
-        <div class="purchase-info">
-            <div class="price-box">
-                <div class="original-price">정가 40,000원</div>
-                <div class="discount-price">
-                    2kg (10-18과) 34,900원
-                    <span class="discount-rate">13% 할인</span>
+            <h2 class="review-title">고객 후기</h2>
+            <div class="review-container">
+                <div class="review-item">
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">진짜 망고향이 나는 복숭아네요! 아이들이 너무 좋아해요. 다음에도 또 주문할게요!</p>
+                    <p class="review-author">- 김○○님</p>
                 </div>
-                <div class="savings">5,100원 절약!</div>
-            </div>
-            <div class="rocket-delivery">🚜 농장 산지직송</div>
-            <p class="delivery-info">주문 후 익일 새벽 수확, 그날 당일 배송! 산지직송!</p>
-            <div class="shipping-notice">
-                <strong>📦 순차발송 안내</strong><br>
-                당일 출고가 원칙이나, 현재 물량 폭주로 인해 <strong>순차발송 예정입니다.</strong><br>
-                출고까지 1-4일 정도 소요되오니 양해 부탁드립니다.<br><br>
-                <strong style="color: #FFD700; font-size: 18px;">⚠️ 중요: 출고 지연으로 인해 수령시 이미 적정 숙도에 도달할 예정입니다.<br>
-                수령 후 후숙 없이 바로 드시거나 냉장보관 하세요!</strong>
+                <div class="review-item">
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">포장이 정말 깔끔하고 복숭아 하나하나가 완벽해요. 당도도 정말 높고 맛있어요!</p>
+                    <p class="review-author">- 이○○님</p>
+                </div>
+                <div class="review-item">
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">산지직송이라 그런지 정말 신선하고 달아요. 가격도 합리적이고 만족합니다!</p>
+                    <p class="review-author">- 박○○님</p>
+                </div>
             </div>
         </div>
         
-        <!-- 원산지 정보 -->
-        <div class="origin-section">
-            <h2 class="section-title">경산 청정 농장에서 직접 보내드려요</h2>
-            <div style="text-align: center;">
-                <span class="origin-badge">📍 경북 경산시 출고</span>
-                <span class="origin-badge">👨‍🌾 3대째 복숭아 재배</span>
-            </div>
-            <p style="margin-top: 20px; color: #666;">
-                "30년 복숭아 재배 노하우로 최고의 망고복숭아만 선별해 보내드립니다"<br>
-                - 경산 엘로우드림 농장 대표 김○○
-            </p>
+        <!-- 특별 할인 -->
+        <div class="special-discount">
+            <h2 class="discount-title">🎉 특별 할인 이벤트</h2>
+            <p class="discount-desc">지금 주문하시면 특별 할인가로 만나보실 수 있습니다!</p>
         </div>
         
-        <!-- 보관 방법 -->
-        <div class="storage-tips">
-            <h3 class="tips-title">🏠 보관 및 섭취 방법</h3>
-            <div class="temperature-warning">
-                <strong>⚠️ 여름철 주의사항</strong><br>
-                복숭아는 기온, 물에 굉장히 예민한 과일입니다.<br>
-                기온이 높아지면 택배차 온도가 40도가 넘어가면서 후숙속도가 빨라지기에 후숙이 필요하지 않을 수 있습니다.<br>
-                <strong>수령시 살짝 말랑하다면</strong> 후숙하지 않고 바로 섭취하시거나 냉장보관하였다가 드시는 것이 좋습니다.<br><br>
-                <strong style="color: #FF6B35;">💡 현재 출고 지연(1-4일)으로 인해 대부분 후숙이 완료된 상태로 도착합니다.<br>
-                수령 즉시 드시는 것을 추천드립니다!</strong>
+        <!-- 주문 정보 -->
+        <div class="order-section">
+            <h2 class="order-title">주문 정보</h2>
+            <div class="order-info">
+                <div class="price-section">
+                    <div class="original-price">정가 40,000원</div>
+                    <div class="discount-price">
+                        2kg (10-18과) 34,900원
+                        <span class="discount-rate">13% 할인</span>
+                    </div>
+                    <div class="savings">5,100원 절약!</div>
+                </div>
+                
+                <div class="order-details">
+                    <div class="detail-item">
+                        <span class="detail-label">원산지</span>
+                        <span class="detail-value">경상북도 영천</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">배송</span>
+                        <span class="detail-value">무료배송 (당일발송)</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">보관방법</span>
+                        <span class="detail-value">냉장보관 (7-10일)</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">당도</span>
+                        <span class="detail-value">15브릭스 이상 보장</span>
+                    </div>
+                </div>
+                
+                <button class="order-button">지금 주문하기</button>
             </div>
-            <ul class="tips-list">
-                <li style="background: #FFE4E1; padding: 10px; border-radius: 5px; font-weight: bold; color: #FF6B35;">현재 출고 지연으로 후숙 불필요! 수령 즉시 드세요</li>
-                <li>수령 후 서늘한 곳에서 1~2일 후숙, 실온 보관시 4일 이내로 드세요</li>
-                <li>냉장 보관시(김치냉장고 추천!) 7일까지 신선도 유지</li>
-                <li>천도복숭아는 껍질째 드셔도 됩니다</li>
-                <li>찬물에 씻어 차갑게 드시면 더욱 맛있습니다</li>
-                <li>복숭아를 각각 신문지로 감싸서 지퍼락에 담아 냉장 보관하시면 오래 드실 수 있습니다(최대 한달)</li>
-            </ul>
         </div>
     </div>
 </body>
-</html>
+</html> 
