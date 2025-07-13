@@ -1,0 +1,33 @@
+# 모든 이미지 파일의 GitHub raw URL 목록
+
+## 기본 이미지
+- 메인 이미지: https://github.com/ilvneo/Peach/blob/main/20250712_090058.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+
+## 갤러리 이미지 (현재 사용 중)
+- https://github.com/ilvneo/Peach/blob/main/20250712_085713.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+- https://github.com/ilvneo/Peach/blob/main/20250712_085833.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+- https://github.com/ilvneo/Peach/blob/main/20250712_085933.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+- https://github.com/ilvneo/Peach/blob/main/20250712_093445.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+
+## 포장 이미지 (현재 사용 중)
+- https://github.com/ilvneo/Peach/blob/main/20250712_094322.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+- https://github.com/ilvneo/Peach/blob/main/20250712_094343.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+
+## 농장 이미지 (현재 사용 중)
+- https://github.com/ilvneo/Peach/blob/main/20250712_094916.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+- https://github.com/ilvneo/Peach/blob/main/20250712_095041.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+- https://github.com/ilvneo/Peach/blob/main/20250712_095549.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+
+## 추가 이미지 (예비용)
+- https://github.com/ilvneo/Peach/blob/main/1752317747040.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+- https://github.com/ilvneo/Peach/blob/main/1752317747702.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+- https://github.com/ilvneo/Peach/blob/main/1752317747981.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+- https://github.com/ilvneo/Peach/blob/main/1752317796072.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+- https://github.com/ilvneo/Peach/blob/main/20250712_122812.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+- https://github.com/ilvneo/Peach/blob/main/20250712_122852.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+- https://github.com/ilvneo/Peach/blob/main/20250712_122911.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true
+
+## 사용법
+1. 위의 URL을 복사하여 HTML img 태그나 CSS background-image에 사용
+2. 예시: background-image: url('https://github.com/ilvneo/Peach/blob/main/20250712_090058.jpg%EC%9D%98%20%EC%82%AC%EB%B3%B8.jpg?raw=true')
+3. 모든 이미지는 GitHub에서 직접 호스팅되어 빠르고 안정적임 
